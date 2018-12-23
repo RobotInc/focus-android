@@ -12,7 +12,7 @@ apply from: "$project.rootDir/tools/gradle/versionCode.gradle"
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "org.mozilla"
         minSdkVersion 21
@@ -125,7 +125,7 @@ android {
             setIgnore(true)
         }
     }
-
+/*
     sourceSets {
         test {
             resources {
@@ -155,16 +155,16 @@ android {
 
         // Debug
 
-        focusWebviewDebug {
+      /*  focusWebviewDebug {
             res.srcDir 'src/focusDebug/res'
-        }
+        }*/
 
-        klarWebviewDebug {
+       /* klarWebviewDebug {
             res.srcDir 'src/klarDebug/res'
-        }
+        }*/
 
         // UI test
-        androidTestWebviewCompile {
+  /*      androidTestWebviewCompile {
             java.srcDirs += ['src/androidTestWebview/java']
         }
 
@@ -196,12 +196,12 @@ android {
             res.srcDir 'src/focusRelease/res'
         }
 
-        focusGeckoX86Release {
+       /* focusGeckoX86Release {
             java.srcDir 'src/focusRelease/java'
             manifest.srcFile 'src/focusRelease/AndroidManifest.xml'
             res.srcDir 'src/focusRelease/res'
-        }
-
+        }*/
+/*
         focusGeckoAarch64Release {
             java.srcDir 'src/focusRelease/java'
             manifest.srcFile 'src/focusRelease/AndroidManifest.xml'
@@ -214,10 +214,10 @@ android {
             res.srcDir 'src/focusDebug/res'
         }
 
-        focusGeckoX86Debug {
+     /*   focusGeckoX86Debug {
             res.srcDir 'src/focusDebug/res'
-        }
-
+        }*/
+/*
         focusGeckoAarch64Debug {
             res.srcDir 'src/focusDebug/res'
         }
@@ -238,7 +238,7 @@ android {
         androidTestGeckoCompile {
            java.srcDirs += ['src/androidTestGecko/java']
         }
-    }
+    }*/
 }
 
 kotlin {
@@ -304,7 +304,7 @@ dependencies {
     implementation "org.mozilla.components:search:$mozilla_components_version"
     implementation "org.mozilla.photon:colors:$mozilla_components_version"
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.22.5"
 
     focusImplementation 'com.adjust.sdk:adjust-android:4.11.4'
